@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Proyecto para enseñar el funcionamiento de un formulario en PHP">
+  <meta name="keywords" content="html, bootstrap, php, formulario, desarrollo, web">
+  <meta name="author" content="Miguel González Aravena">
+  <title>Formulario en PHP</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container">
+  <h1>Formulario</h1>
+  <!-- Formulario -->
+  <form enctype="multipart/form-data" method="post" action="enviarform.php" accept-charset="UTF-8">
+    <!-- Hidden -->
+    <input type="hidden" name="enviado" value="1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Formulario</h3>
+      </div>
+      <div class="panel-body">
+        <!-- Texto -->
+        <div class="form-group">
+          <b>Nombre</b>
+          <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" required>
+        </div>
+        <!--RUT-->
+          <b>Apellido</b>
+          <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido" required>
+        </div>
+        <!--Fecha de Nacimiento -->
+        
+          <div class="container">
+      <div class="row">
+          <div class='col-sm-6'>
+              <div class="form-group">
+                <b>Fecha</b>
+                  <div class='input-group date' id='datetimepicker1'>
+                      <input type='text' name="fecha" class="form-control" required />
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
+              </div>
+          </div>
+          <script type="text/javascript">
+              $(function () {
+                  $('#datetimepicker1').datetimepicker();
+              });
+          </script>
+        </div>
+      </div>
+        <!-- area -->
+        <div class="form-group ">
+          <b>Sexo</b><br/>
+            <input type="radio" name="sexo" value="f" required > Femenino<br />
+            <input type="radio" name="sexo" value="m" required > Masculino<br />
+          </div>
+        <!-- Seleccione Region -->
+           <div class="form-group">
+          <b>Region<br />
+          <select name="region" class="form-control" required>
+            <option value="Región Metropolitana ">Región Metropolitana</option>
+            <option value="XV Arica y Parinacota">XV Arica y Parinacota</option>
+            <option value="I Tarapacá<">I Tarapacá</option>
+            <option value="II Antofagasta">II Antofagasta</option>
+            <option value="III Atacama">III Atacama</option>
+            <option value="IV Coquimbo">IV Coquimbo</option>
+            <option value="V Valparaíso">V Valparaíso</option>
+            <option value="V Valparaíso">V Valparaíso</option>
+            <option value="VII Maule">VII Maule</option>
+            <option value="IV Coquimbo">IV Coquimbo</option>
+            <option value="VIII Biobío">VIII Biobío</option>
+            <option value="IX La Araucanía">IX La Araucanía</option>
+            <option value="XIV Los Ríos">XIV Los Ríos</option>
+            <option value="X Los Lagos">X Los Lagos</option>
+            <option value="XI Aysén">XI Aysén</option>
+            <option value="XII Magallanes y Antártica">XII Magallanes y Antártica</option>
+           </select>
+        </div>
+        <!--Areas de Interes-->
+        <div class="form-group">
+          <b>Areas de Interese</b><br/>
+            <input type="radio" name="area" value="Ciencia"> Ciencia<br/>
+            <input type="radio" name="area" value="Deportes"> Deportes<br/>
+            <input type="radio" name="area" value="Pintura rupestre"> Pintura rupestre<br/>
+            <input type="radio" name="area" value="Videos de Gatos"> Videos de Gatos<br/>
+        </div>
+        <!-- Pagina Personal-->
+           <div class="form-group">
+          <b>Pagina Personal</b>
+          <input type="text" class="form-control" name="pagina" placeholder="Ingrese su pagina">
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <b>Correo electrónico</b>
+          <input type="email" class="form-control" name="correo" placeholder="Ingrese su correo electrónico">
+        </div>
+        <!--color -->
+         <div class="form-group">
+          <b>Color Favorito</b>
+          <input type="text" class="form-control" name="color" placeholder="Ingrese su color">
+        </div>
+         <!-- Button submit -->
+          <button type="submit" class="btn btn-success">
+            Enviar
+            <i class="glyphicon glyphicon-menu-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
